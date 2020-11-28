@@ -1,0 +1,8 @@
+/Versions
+*.o
+*.exe
+*.lrs
+*.ppu
+*.compiled
+*.ini
+*.obj
