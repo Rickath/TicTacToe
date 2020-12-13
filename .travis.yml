@@ -15,7 +15,7 @@ env:
     - DISPLAY=:99.0
   matrix:
     - LAZ_PKG=true  # Use the latest version from the default package manager
-    - LAZ_VER=2.0.11 # Use specific (binary) release
+    - LAZ_VER=2.0.10 # Use specific (binary) release
 
 matrix:
   include:
