@@ -36,6 +36,8 @@ install:
   - python ./.travis.install.py
 
 script:
-  - lazbuild $LAZ_OPT TicTacToe.lpi               # Build TicTacToe project
-  - $LAZ_ENV ./TicTacToe --all --format=plain # Run TIcTacToe
+  - lazbuild $LAZ_OPT TicTacToe.lpi                     # Build TicTacToe project
+  - $LAZ_ENV ./TicTacToe --all --format=plain           # Run TicTacToe
+  - lazbuild $LAZ_OPT TestTicTacToeApp.lpi              # Build TestTicTacToeApp (contains FPCUnit tests that can be run without human interaction...)
+  - $LAZ_ENV ./TestTicTacToeApp --all --format=plain    # Run TestTicTacToeApp
 
