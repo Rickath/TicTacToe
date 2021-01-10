@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# Part of `travis-lazarus` (https://github.com/nielsAD/travis-lazarus)
+# Thanks to and part of `travis-lazarus` (https://github.com/nielsAD/travis-lazarus)
 # License: MIT
 
 import sys
