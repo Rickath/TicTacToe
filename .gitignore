@@ -1,4 +1,5 @@
 /Versions
+/backup
 *.o
 *.exe
 *.lrs

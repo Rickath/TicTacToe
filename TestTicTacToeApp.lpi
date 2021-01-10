@@ -1,30 +1,33 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <CONFIG>
   <ProjectOptions>
+    <Version Value="11"/>
     <PathDelim Value="\"/>
-    <Version Value="6"/>
     <General>
+      <Flags>
+        <LRSInOutputDirectory Value="False"/>
+      </Flags>
       <MainUnit Value="0"/>
-      <IconPath Value="./"/>
-      <TargetFileExt Value=".exe"/>
-      <ActiveEditorIndexAtStart Value="0"/>
     </General>
     <VersionInfo>
-      <ProjectVersion Value=""/>
       <Language Value=""/>
       <CharSet Value=""/>
     </VersionInfo>
+    <BuildModes Count="1">
+      <Item1 Name="default" Default="True"/>
+    </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
-      <IgnoreBinaries Value="False"/>
-      <IncludeFileFilter Value="*.(pas|pp|inc|lfm|lpr|lrs|lpi|lpk|sh|xml)"/>
-      <ExcludeFileFilter Value="*.(bak|ppu|ppw|o|so);*~;backup"/>
     </PublishOptions>
     <RunParams>
-      <local>
-        <FormatVersion Value="1"/>
-        <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
-      </local>
+      <FormatVersion Value="2"/>
+      <Modes Count="1">
+        <Mode0 Name="default">
+          <local>
+            <LaunchingApplication PathPlusParams="/usr/X11R6/bin/xterm -T 'Lazarus Run Output' -e $(LazarusDir)/tools/runwait.sh $(TargetCmdLine)"/>
+          </local>
+        </Mode0>
+      </Modes>
     </RunParams>
     <RequiredPackages Count="3">
       <Item1>
@@ -41,51 +44,46 @@
       <Unit0>
         <Filename Value="TestTicTacToeApp.lpr"/>
         <IsPartOfProject Value="True"/>
-        <UnitName Value="TestTicTacToeApp"/>
+        <EditorIndex Value="2"/>
         <CursorPos X="5" Y="12"/>
-        <TopLine Value="1"/>
-        <UsageCount Value="50"/>
+        <UsageCount Value="51"/>
+        <Loaded Value="True"/>
       </Unit0>
       <Unit1>
         <Filename Value="testtictactoeclass.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TestTicTacToeClass"/>
-        <CursorPos X="47" Y="43"/>
-        <TopLine Value="19"/>
-        <UsageCount Value="50"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="31"/>
+        <CursorPos X="59" Y="45"/>
+        <UsageCount Value="51"/>
+        <Loaded Value="True"/>
       </Unit1>
       <Unit2>
         <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.0\source\packages\fcl-fpcunit\src\fpcunit.pp"/>
-        <UnitName Value="fpcunit"/>
-        <CursorPos X="17" Y="397"/>
         <TopLine Value="391"/>
+        <CursorPos X="17" Y="397"/>
         <UsageCount Value="25"/>
       </Unit2>
       <Unit3>
         <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.0\source\packages\fcl-fpcunit\src\testutils.pp"/>
-        <UnitName Value="testutils"/>
-        <CursorPos X="1" Y="1"/>
         <TopLine Value="33"/>
         <UsageCount Value="7"/>
       </Unit3>
       <Unit4>
         <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.0\source\packages\fcl-fpcunit\src\testregistry.pp"/>
-        <UnitName Value="testregistry"/>
-        <CursorPos X="1" Y="1"/>
-        <TopLine Value="1"/>
         <UsageCount Value="7"/>
       </Unit4>
       <Unit5>
         <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.0\source\rtl\win32\classes.pp"/>
         <UnitName Value="Classes"/>
-        <CursorPos X="8" Y="30"/>
         <TopLine Value="3"/>
+        <CursorPos X="8" Y="30"/>
         <UsageCount Value="7"/>
       </Unit5>
       <Unit6>
         <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.0\source\rtl\win32\windows.pp"/>
-        <UnitName Value="windows"/>
-        <CursorPos X="1" Y="1"/>
         <TopLine Value="35"/>
         <UsageCount Value="7"/>
       </Unit6>
@@ -94,50 +92,45 @@
         <ComponentName Value="GUITestRunner"/>
         <HasResources Value="True"/>
         <UnitName Value="GuiTestRunner"/>
-        <CursorPos X="1" Y="1"/>
-        <TopLine Value="1"/>
         <UsageCount Value="7"/>
       </Unit7>
       <Unit8>
         <Filename Value="Main.pas"/>
+        <IsPartOfProject Value="True"/>
         <ComponentName Value="frMain"/>
         <HasResources Value="True"/>
-        <IsPartOfProject Value="True"/>
-        <ResourceFilename Value="Main.lrs"/>
-        <UnitName Value="Main"/>
-        <CursorPos X="42" Y="243"/>
-        <TopLine Value="222"/>
-        <EditorIndex Value="0"/>
-        <UsageCount Value="50"/>
+        <ResourceBaseClass Value="Form"/>
+        <TopLine Value="259"/>
+        <CursorPos X="60" Y="19"/>
+        <UsageCount Value="51"/>
         <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit8>
       <Unit9>
         <Filename Value="..\..\..\..\..\lazarus\lcl\include\control.inc"/>
-        <CursorPos X="1" Y="2435"/>
         <TopLine Value="2421"/>
+        <CursorPos Y="2435"/>
         <UsageCount Value="7"/>
       </Unit9>
       <Unit10>
         <Filename Value="..\..\..\..\..\lazarus\fpc\2.2.0\source\rtl\objpas\classes\classesh.inc"/>
-        <CursorPos X="14" Y="1375"/>
         <TopLine Value="1334"/>
+        <CursorPos X="14" Y="1375"/>
         <UsageCount Value="7"/>
       </Unit10>
       <Unit11>
         <Filename Value="..\..\..\..\..\lazarus\lcl\dialogs.pp"/>
         <UnitName Value="Dialogs"/>
-        <CursorPos X="11" Y="479"/>
         <TopLine Value="465"/>
+        <CursorPos X="11" Y="479"/>
         <UsageCount Value="7"/>
       </Unit11>
       <Unit12>
         <Filename Value="Main.lrs"/>
-        <CursorPos X="1" Y="1"/>
-        <TopLine Value="1"/>
         <UsageCount Value="7"/>
       </Unit12>
     </Units>
-    <JumpHistory Count="1" HistoryIndex="0">
+    <JumpHistory Count="1">
       <Position1>
         <Filename Value="Main.pas"/>
         <Caret Line="265" Column="16" TopLine="222"/>
@@ -145,14 +138,13 @@
     </JumpHistory>
   </ProjectOptions>
   <CompilerOptions>
-    <Version Value="5"/>
+    <Version Value="11"/>
     <PathDelim Value="\"/>
-    <CodeGeneration>
-      <Generate Value="Faster"/>
-    </CodeGeneration>
-    <Other>
-      <CompilerPath Value="$(CompPath)"/>
-    </Other>
+    <Parsing>
+      <SyntaxOptions>
+        <UseAnsiStrings Value="False"/>
+      </SyntaxOptions>
+    </Parsing>
   </CompilerOptions>
   <Debugging>
     <Exceptions Count="2">

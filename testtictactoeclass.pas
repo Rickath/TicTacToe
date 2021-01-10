@@ -18,7 +18,7 @@ type
   FMain : Tfrmain;
   private
     procedure TestCells(i, j, k: integer);
-    procedure JouerPartie(partie,tableau_attendu,resultat_attendu: String);
+    //procedure JouerPartie(partie,tableau_attendu,resultat_attendu: String);
   protected
     procedure SetUp; override; 
     procedure TearDown; override; 
@@ -28,7 +28,7 @@ type
     procedure TestNouvellePartie;
     procedure TestResetScore;
     procedure TestCaseDejaOccupee;
-    procedure TestParties;
+    //procedure TestParties;
   end;
 
 implementation
@@ -122,80 +122,80 @@ begin
   end;
 end;
 
-procedure TTestTicTacToe.TestParties;
-var
-  FileName: String;
-  FileContent: TStringList;
-  Fields: TStringList;
-  ligne: longint;
-begin
-  FileName := 'Simulateur_parties/parties_extrait.csv';
-  FileContent := TStringList.Create;
-try
-  FileContent.LoadFromFile(FileName); // On met le contenu du fichier dans une TStringList
-
-  // On parcourt chacune des lignes de la liste
-  for ligne := 0 to pred(FileContent.Count) do begin
-    Fields := TStringList.Create;
-    try
-      Fields.Delimiter := ';'; // Le séparateur du fichier délimité est le point-virgule
-      Fields.DelimitedText := FileContent.Strings[ligne]; // On récupère le contenu de la ligne
-      //On joue la partie de la ligne
-      JouerPartie(Fields[0],Fields[1],Fields[2]);
-    finally
-      Fields.Free;
-    end;
-
-  end;
-  finally
-    FileContent.Free;
-  end;
-end;
+//procedure TTestTicTacToe.TestParties;
+//var
+//  FileName: String;
+//  FileContent: TStringList;
+//  Fields: TStringList;
+//  ligne: longint;
+//begin
+//  FileName := 'Simulateur_parties/parties_extrait.csv';
+//  FileContent := TStringList.Create;
+//try
+//  FileContent.LoadFromFile(FileName); // On met le contenu du fichier dans une TStringList
+//
+//  // On parcourt chacune des lignes de la liste
+//  for ligne := 0 to pred(FileContent.Count) do begin
+//    Fields := TStringList.Create;
+//    try
+//      Fields.Delimiter := ';'; // Le séparateur du fichier délimité est le point-virgule
+//      Fields.DelimitedText := FileContent.Strings[ligne]; // On récupère le contenu de la ligne
+//      //On joue la partie de la ligne
+//      JouerPartie(Fields[0],Fields[1],Fields[2]);
+//    finally
+//      Fields.Free;
+//    end;
+//
+//  end;
+//  finally
+//    FileContent.Free;
+//  end;
+//end;
 
 //La fonction JouerPartie prend en paramètre d'entrée
 //- la partie de Morpion à jouer issue du fichier (premier champ du csv)
 //- l'état final du tableau attendu (deuxième champ du csv)
 //- le résultat de la partie (gagnant ou égalité, troisième champ du csv)
-procedure TTestTicTacToe.JouerPartie(partie,tableau_attendu,resultat_attendu : String);
-var
-  i: longint;
-  j: 0..8;
-  case_joue : 0..8;
-  //Wnd: HWND;
-  tableau_final: String;
-  resultat_final: String;
-begin
-  //On initialise au bon premier joueur
-  if partie[1] = 'X' then FMain.rgPlayFirst.ItemIndex := 0;
-  if partie[1] = 'O' then FMain.rgPlayFirst.ItemIndex := 1;
-
-  FMain.InitPlayground;
-  tableau_final := '';
-
-  //On parcourt tous les coups, et on les joue en simulant le clic sur l'interface
-  for i := 1 to Length(partie) Div 2 do begin
-    case_joue := StrToInt(partie[2*i]);
-    FMain.lblCell0Click(TLabel(Fmain.FindComponent('lblCell' + IntToStr(case_joue))));
-  end;
-
-  //On récupère l'état final du tableau
-  for j:= 0 to 7 do begin
-    tableau_final := tableau_final + TLabel(Fmain.FindComponent('lblCell' + IntToStr(j))).Caption + ',';
-  end;
-  tableau_final := tableau_final + TLabel(Fmain.FindComponent('lblCell' + IntToStr(8))).Caption;
-
-  //On récupère le résultat final (si bwin est faux, c'est draw, sinon c'est le signe qui gagne)
-  if bwin then resultat_final:='win'+sPlaySign else resultat_final:='draw';
-
-  AssertEquals('Le tableau final ne correspond pas à ce qui est attendu', tableau_final, tableau_attendu);
-  AssertEquals('Le résultat final ne correspond pas à ce qui est attendu', resultat_final, resultat_attendu);
-
-  //Des print de vérification pendant la conception de la fonction
-  //Write(tableau_final); Write(' ###### '); Write(tableau_attendu);
-  //Writeln('');
-  //Write(resultat_final); Write(' ###### '); Write(resultat_attendu);
-  //Writeln('');
-end;
+//procedure TTestTicTacToe.JouerPartie(partie,tableau_attendu,resultat_attendu : String);
+//var
+//  i: longint;
+//  j: 0..8;
+//  case_joue : 0..8;
+//  //Wnd: HWND;
+//  tableau_final: String;
+//  resultat_final: String;
+//begin
+//  //On initialise au bon premier joueur
+//  if partie[1] = 'X' then FMain.rgPlayFirst.ItemIndex := 0;
+//  if partie[1] = 'O' then FMain.rgPlayFirst.ItemIndex := 1;
+//
+//  FMain.InitPlayground;
+//  tableau_final := '';
+//
+//  //On parcourt tous les coups, et on les joue en simulant le clic sur l'interface
+//  for i := 1 to Length(partie) Div 2 do begin
+//    case_joue := StrToInt(partie[2*i]);
+//    FMain.lblCell0Click(TLabel(Fmain.FindComponent('lblCell' + IntToStr(case_joue))));
+//  end;
+//
+//  //On récupère l'état final du tableau
+//  for j:= 0 to 7 do begin
+//    tableau_final := tableau_final + TLabel(Fmain.FindComponent('lblCell' + IntToStr(j))).Caption + ',';
+//  end;
+//  tableau_final := tableau_final + TLabel(Fmain.FindComponent('lblCell' + IntToStr(8))).Caption;
+//
+//  //On récupère le résultat final (si bwin est faux, c'est draw, sinon c'est le signe qui gagne)
+//  if bwin then resultat_final:='win'+sPlaySign else resultat_final:='draw';
+//
+//  AssertEquals('Le tableau final ne correspond pas à ce qui est attendu', tableau_final, tableau_attendu);
+//  AssertEquals('Le résultat final ne correspond pas à ce qui est attendu', resultat_final, resultat_attendu);
+//
+//  //Des print de vérification pendant la conception de la fonction
+//  //Write(tableau_final); Write(' ###### '); Write(tableau_attendu);
+//  //Writeln('');
+//  //Write(resultat_final); Write(' ###### '); Write(resultat_attendu);
+//  //Writeln('');
+//end;
 
 procedure TTestTicTacToe.TestCells (i,j,k : integer);
 begin
@@ -231,8 +231,6 @@ end;
 //----------------------------------------------------------------------
 initialization
 
-  //Chargement du fichier
-  //ChargementFichier('..\Simulateurs_parties\parties_extrait.csv');
   RegisterTest(TTestTicTacToe); 
 end.
 

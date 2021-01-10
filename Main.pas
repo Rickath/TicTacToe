@@ -262,8 +262,30 @@ end;
 //--------------------------------------------------------------------------
 // function de jeu automatique heuristique 1
 function TfrMain.Autoplay(Cell : integer):integer ;
+var
+   Component : Tcomponent;
+   Base : integer;
+   EndPlay : Boolean;
 begin
-result := Cell;
+  EndPlay := false;
+  Base := Cell;
+  if not (bgameover) then
+  begin
+  repeat
+  base := base +1;
+      if Base >=9 then Base :=0;
+      Component :=FindComponent('lblCell' + IntToStr(Base));
+      if TLabel(Component).Caption = ''
+       then begin
+         CellIndexPlay := Base;
+         EndPlay := true;
+       end
+       else EndPlay := False;
+    until EndPlay =true;
+    result :=   CellIndexPlay;
+    GamePlay(CellIndexPlay);
+    Switchplayer();
+    end;
 end;
 //--------------------------------------------------------------------------
 // Initialization du package (unité)
