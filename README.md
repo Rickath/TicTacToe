@@ -27,3 +27,8 @@ Tests are run via FPCunit tests
   - correct behavior when new game is selected
   - correct behavior when the score is reset
   - ~~right outcomes of simulated games~~ simulated games approach dismissed since autoplay was integrated to v1
+  
+  
+# This project is now archived
+
+This project is now archived and read-only. It was only meant as homework for a course.
