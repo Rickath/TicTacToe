@@ -2,9 +2,9 @@
 
 TicTacToe is a simple TicTacToe App written in FreePascal and meant to be compiled using Lazarus IDE.
 
-## v1
+## v2
 
-The v1 of TicTacToe allows a player to challenge the computer in a fierce TicTacToe game
+The v2 of TicTacToe allows a player to challenge the computer in a fierce TicTacToe game
 
 ### Features
 - Launching the TicTacToe executable shall allow a player to play a TicTacToe game against the computer
@@ -26,4 +26,4 @@ Tests are run via FPCunit tests
   - correct behavior when selecting already occupied cell
   - correct behavior when new game is selected
   - correct behavior when the score is reset
-  - ~~right outcomes of simulated games~~ simulated games approach dismissed since autoplay is integrated to v1
+  - ~~right outcomes of simulated games~~ simulated games approach dismissed since autoplay was integrated to v1
