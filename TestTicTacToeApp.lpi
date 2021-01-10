@@ -53,7 +53,6 @@
         <Filename Value="testtictactoeclass.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="TestTicTacToeClass"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="31"/>
         <CursorPos X="59" Y="45"/>
@@ -100,6 +99,7 @@
         <ComponentName Value="frMain"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
+        <IsVisibleTab Value="True"/>
         <TopLine Value="259"/>
         <CursorPos X="60" Y="19"/>
         <UsageCount Value="51"/>

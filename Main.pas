@@ -162,7 +162,7 @@ var
  x, y : 1..3;
  iWin : integer;
 begin
- Result := -1;
+ Result := -10;
 
  Inc(iMove);
  x := (xo_Move Div 3) + 1;
